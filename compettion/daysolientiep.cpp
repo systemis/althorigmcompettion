@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<int> arr = {4, 1, 0, 1, 1, 0, 1};
+vector<int> arr = {4, 1, 3, 3, 5, 16};
 int maxScore = 0;
 
 bool isEqual(vector<int> arrA, vector<int> arrB){
@@ -49,15 +49,15 @@ void solve(vector<int> comp, int iPos, int score){
     }
   }
 
-  
 
   if (!isEqual(arrA, arrB))
   {
     solve(comp, iPos + 1, score);
     return;
   }else{
-    score += 1; 
-    if (score > maxScore){
+    score += 1;
+    if (score > maxScore)
+    {
       maxScore = score;
     }
     solve(arrA, 1, score);

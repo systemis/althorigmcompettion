@@ -25,7 +25,6 @@ void checking_balance(vector<char> arr){
 
   if (a == b && a == c)
   {
-    cout << a << " " << b << " " << c << endl;
     result++;
   }
 }
@@ -44,6 +43,13 @@ void progress(vector<char> arr){
 }
 
 int main(){
+  int n;
+  cin >> n;
+  nums.resize(n);
+  for(int i =0; i < n; i++){
+    cin >> nums[i];
+  }
+
   progress(vector<char>());
   cout << result << endl;
   return 0;
